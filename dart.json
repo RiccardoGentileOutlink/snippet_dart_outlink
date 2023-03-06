@@ -1,0 +1,16 @@
+{
+	"Map": {
+		"prefix": "map",
+		"body": [
+			"${1:variabile}: ${2:name}['${1}'],",
+			"$0"
+		]
+	},
+	"JMap": {
+		"prefix": "jmap",
+		"body": [
+			"\"${2:1}\": ${1:variabile},",
+			"$0"
+		]
+	}
+}
