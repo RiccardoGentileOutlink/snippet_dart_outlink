@@ -9,7 +9,7 @@
 	"JMap": {
 		"prefix": "jmap",
 		"body": [
-			"\"${2:1}\": ${1:variabile},",
+			"\"${1}\": ${1:variabile},",
 			"$0"
 		]
 	}
