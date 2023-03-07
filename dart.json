@@ -1,16 +1,26 @@
 {
-	"Map": {
-		"prefix": "map",
+	"Create Model": {
+		"prefix": "model",
 		"body": [
-			"${1:variabile}: ${2:name}['${1}'],",
-			"$0"
-		]
-	},
-	"JMap": {
-		"prefix": "jmap",
-		"body": [
-			"\"${1}\": ${1:variabile},",
-			"$0"
+			"class ${1:className}Model implements AbstractModel {",
+			"\t${2:type}? ${3:variabile};",
+			"",
+			"\t${1:className}({",
+			"\t\tthis.${3}",
+			"\t});",
+			"",
+			"\tfactory ${1:calssName}.fromJson(Map<String, dynamic> json) { ",
+			"\t\treturn ${1:calssName}(",
+			"\t\t\t${3}: json['${3}']",
+			"\t\t);",
+			"\t}",
+			"\t@override",
+			"\tMap<String, dynamic>? toJson() {",
+			"\t\treturn <String, dynamic>{",
+			"\t\t\"${3}\": ${3}",
+			"\t\t};",
+			"\t}",
+			"}",
 		]
 	}
 }
